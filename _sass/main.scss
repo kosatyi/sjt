@@ -2,6 +2,7 @@
 @import 'source/highlight';
 @import 'source/menubars';
 
+
 $font-weight-bold: 700;
 $font-weight-normal: 400;
 $grid-gutter-width: 1rem;
@@ -10,7 +11,7 @@ $brand-success:#159957;
 
 $light-border:rgba(255, 255, 255, 0.2);
 
-$header-gradient:linear-gradient(120deg, #155799, #159957);
+$header-gradient:linear-gradient(120deg, #155799, #999999);
 
 body {
   padding: 0;
