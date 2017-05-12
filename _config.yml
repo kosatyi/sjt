@@ -1,9 +1,5 @@
 markdown: kramdown
 
-collections:
-  assets:
-    output: true
-
 title:        Simple Jekyll Theme
 tagline:      Short Description
 baseurl:
