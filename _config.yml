@@ -1,0 +1,14 @@
+markdown: kramdown
+
+title:        Simple Jekyll Theme
+tagline:      Short Description
+baseurl:
+
+author:
+  name:
+  url:
+
+buttons:
+  github:
+  zip:
+  tar:
