@@ -1,3 +1,3 @@
 # Simple Jekyll Theme
 
-Content
+![screenshot](screenshot.png)
