@@ -141,11 +141,14 @@ a {
 .page-brand{
   font-weight: 300;
   float:left;
-  padding: 0 $grid-gutter-width;
+  padding: 0 $grid-gutter-width 0 0;
   line-height: 2rem + 1.5rem;
   font-size:23px;
   @media screen and (max-width: 64em) {
     line-height: 1rem + 1.5rem;
+  }
+  @media screen and (max-width: 42em) {
+    padding-left:$grid-gutter-width;
   }
   a{
     line-height:0px;
