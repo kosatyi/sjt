@@ -204,14 +204,15 @@ a {
   [data-toggle] {
     display:none;
     border-left:1px solid $light-border;
+    $menu-bg:lighten($brand-success,10%);
     @media screen and (max-width: 42em) {
       display:block;
       &.show {
-        background: $brand-success;
+        background: $menu-bg;
         + ul {
           display: block;
           border: 1px solid $light-border;
-          background: $brand-success;
+          background: $menu-bg;
           border-right: 0;
           li {
             border-bottom: 1px solid $light-border;
