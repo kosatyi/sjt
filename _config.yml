@@ -12,3 +12,11 @@ buttons:
   github:
   zip:
   tar:
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
