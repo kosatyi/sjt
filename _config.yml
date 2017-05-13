@@ -1,3 +1,6 @@
+gems:
+  - jekyll-seo-tag
+
 markdown: kramdown
 
 title:        Simple Jekyll Theme
