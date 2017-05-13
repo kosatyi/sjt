@@ -145,7 +145,6 @@ a {
   line-height: 2rem + 1.5rem;
   font-size:23px;
   @media screen and (max-width: 42em) {
-    line-height: 1rem + 1.5rem;
     padding-left:$grid-gutter-width;
   }
   a{
@@ -186,9 +185,6 @@ a {
     display: block;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     padding:1rem $grid-gutter-width;
-    @media screen and (max-width: 42em) {
-      padding:0.5rem $grid-gutter-width;
-    }
     &:hover {
       background-color: rgba(255,255,255,0.1);
     }
@@ -229,9 +225,6 @@ a {
   background-color: #159957;
   background-image:$header-gradient;
   padding-top: 2rem + 1.5rem;
-  @media screen and (max-width: 42em) {
-    padding-top: 1rem + 1.5rem;
-  }
   :last-child{
     margin-bottom:0;
   }
