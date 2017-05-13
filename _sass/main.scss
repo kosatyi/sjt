@@ -207,15 +207,18 @@ a {
     @media screen and (max-width: 42em) {
       display:block;
     }
-    &.show + ul{
-      display:block;
-      border:1px solid $light-border;
-      background-image:$header-gradient;
-      border-right:0;
-      li{
-        border-bottom:1px solid $light-border;
-        &:last-child{
-          border-bottom:none;
+    &.show {
+      background: $brand-success;
+      + ul {
+        display: block;
+        border: 1px solid $light-border;
+        background: $brand-success;
+        border-right: 0;
+        li {
+          border-bottom: 1px solid $light-border;
+          &:last-child {
+            border-bottom: none;
+          }
         }
       }
     }
