@@ -207,12 +207,24 @@ a {
 }
 
 
-.page-overview{
+.page-banner{
   @media screen and (min-width: 64em) {
     padding: 5rem 2rem;
   }
   @media screen and (min-width: 42em) and (max-width: 64em) {
     padding: 3rem 2rem;
+  }
+  @media screen and (max-width: 42em) {
+    padding: 1rem;
+  }
+}
+
+.page-overview{
+  @media screen and (min-width: 64em) {
+    padding: 2rem;
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    padding: 2rem;
   }
   @media screen and (max-width: 42em) {
     padding: 1rem;
