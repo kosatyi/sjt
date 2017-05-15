@@ -433,6 +433,9 @@ a {
 ol.page-breadcrumbs{
   margin:1rem 0;
   padding:0;
+  @media screen and (max-width: 42em) {
+    padding: 2rem 0 1rem 0;
+  }
   >li{
     margin:0;
     padding:0;
