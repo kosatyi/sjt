@@ -3,7 +3,7 @@
 {% assign result  = "" | split : "," %}
 {% assign list    = site.html_pages %}
 {% if count > 0 %}
-<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+<ol class="page-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 {% for part in path %}
 {% assign result  = result | push: part %}
 {% assign match   = result | join: '/' %}
