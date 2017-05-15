@@ -11,7 +11,7 @@
 {% assign match   = match | append: '/' %}
 {% endunless %}
 {% assign current = list | where: "url", match | first %}
-{% if current.title != '' %}
+{% if current.title %}
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <a href="{{ site.url }}{{site.baseurl}}{{current.url}}" itemprop="item">
         <span itemprop="name">{{ current.title }}</span>
