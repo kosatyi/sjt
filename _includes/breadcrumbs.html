@@ -12,7 +12,7 @@
 {% endunless %}
 {% assign current = list | where: "url", match | first %}
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a href="{{ site.url }}{{site.base_url}}{{current.url}}" itemprop="item">
+    <a href="{{ site.url }}{{site.baseurl}}{{current.url}}" itemprop="item">
         <span itemprop="name">{{ current.title }}</span>
     </a>
 </li>
