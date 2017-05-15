@@ -1557,7 +1557,7 @@ ol.page-breadcrumbs {
 @media screen and (max-width: 42em) {
   /* line 433, ../../_sass/main.scss */
   ol.page-breadcrumbs {
-    padding: 2rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
   }
 }
 /* line 439, ../../_sass/main.scss */
