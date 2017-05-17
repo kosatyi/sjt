@@ -1,6 +1,11 @@
 gems:
   - jekyll-seo-tag
 
+styles:
+  - main.css
+javascript:
+  - main.js
+
 markdown: kramdown
 
 title:        Simple Jekyll Theme
