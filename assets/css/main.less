@@ -2,16 +2,14 @@
 @import 'source/highlight';
 @import 'source/menubars';
 
+@font-weight-bold: 700;
+@font-weight-normal: 400;
+@grid-gutter-width: 1rem;
+@brand-primary:#155799;
+@brand-success:#159957;
+@light-border:rgba(255, 255, 255, 0.2);
+@header-gradient:linear-gradient(120deg, #155799, #159957);
 
-$font-weight-bold: 700;
-$font-weight-normal: 400;
-$grid-gutter-width: 1rem;
-$brand-primary:#155799;
-$brand-success:#159957;
-
-$light-border:rgba(255, 255, 255, 0.2);
-
-$header-gradient:linear-gradient(120deg, #155799, #159957);
 
 body {
   padding: 0;
@@ -115,13 +113,13 @@ a {
 .page-toolbar{
   position: fixed;
   z-index:10;
-  border-bottom:1px solid $light-border;
+  border-bottom:1px solid @light-border;
   left:0;
   right:0;
   top: 0;
   z-index: 20;
   &.scrolled{
-    background-image:$header-gradient;
+    background-image:@header-gradient;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
   }
   .container {
@@ -141,11 +139,11 @@ a {
 .page-brand{
   font-weight: 300;
   float:left;
-  padding: 0 $grid-gutter-width 0 0;
+  padding: 0 @grid-gutter-width 0 0;
   line-height: 2rem + 1.5rem;
   font-size:23px;
   @media screen and (max-width: 42em) {
-    padding-left:$grid-gutter-width;
+    padding-left:@grid-gutter-width;
   }
   a{
     line-height:0px;
@@ -161,7 +159,7 @@ a {
     padding: 0;
     margin: 0;
     list-style: none;
-    border-left:1px solid $light-border;
+    border-left:1px solid @light-border;
     float:right;
     @media screen and (max-width: 42em) {
       display:none;
@@ -172,44 +170,44 @@ a {
  }
   li {
     float:left;
-    border-right:1px solid $light-border;
+    border-right:1px solid @light-border;
     @media screen and (max-width: 42em) {
       float:none;
     }
   }
   a {
     color:#fff;
-    font-weight: $font-weight-normal;
+    font-weight: @font-weight-normal;
     position: relative;
     text-decoration:none;
     display: block;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    padding:1rem $grid-gutter-width;
+    padding:1rem @grid-gutter-width;
     &:hover {
       background-color: rgba(255,255,255,0.1);
     }
     &.active {
       &:hover, & {
-        background-color:$light-border;
+        background-color:@light-border;
         color:#fff;
       }
     }
   }
   [data-toggle] {
     display:none;
-    border-left:1px solid $light-border;
-    $menu-bg:lighten($brand-success,5%);
+    border-left:1px solid @light-border;
+    @menu-bg:lighten(@brand-success,5%);
     @media screen and (max-width: 42em) {
       display:block;
       &.show {
-        background: $menu-bg;
+        background: @menu-bg;
         + ul {
           display: block;
-          border: 1px solid $light-border;
-          background: $menu-bg;
+          border: 1px solid @light-border;
+          background: @menu-bg;
           border-right: 0;
           li {
-            border-bottom: 1px solid $light-border;
+            border-bottom: 1px solid @light-border;
             &:last-child {
               border-bottom: none;
             }
@@ -223,7 +221,7 @@ a {
 .page-header {
   color: #fff;
   background-color: #159957;
-  background-image:$header-gradient;
+  background-image:@header-gradient;
   padding-top: 2rem + 1.5rem;
   :last-child{
     margin-bottom:0;
@@ -471,7 +469,7 @@ ol.page-breadcrumbs{
         }
         display:block;
         padding:1rem;
-        font-weight:$font-weight-bold;
+        font-weight:@font-weight-bold;
         color: #155799;
         background-color: #f3f6fa;
         border-color: #dce6f0;
