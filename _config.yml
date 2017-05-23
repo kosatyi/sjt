@@ -19,9 +19,15 @@ author:
   url:
 
 buttons:
-  github:
-  zip:
-  tar:
+  -
+    name: View on GitHub
+    link:
+  -
+    name: Download .zip
+    link:
+  -
+    name: Download .tar.gz
+    link:
 
 defaults:
   -
