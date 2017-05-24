@@ -24,13 +24,13 @@ author:
 buttons:
   -
     name: View on GitHub
-    link:
+    link: https://github.com/kosatyi/sjt
   -
     name: Download .zip
-    link:
+    link: http://github.com/kosatyi/sjt/archive/master.zip
   -
     name: Download .tar.gz
-    link:
+    link: http://github.com/kosatyi/sjt/archive/master.tar.gz
 
 defaults:
   -
