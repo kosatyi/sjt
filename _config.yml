@@ -3,6 +3,9 @@ gems:
 
 port: 4001
 
+
+baseurl: /sjt
+
 styles:
   - main.css
 javascript:
