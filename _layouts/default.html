@@ -18,4 +18,4 @@
 {% include loader.html %}
 </body>
 </html>
-{% endcapture %}{{ output }}
+{% endcapture %}{{ output | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
