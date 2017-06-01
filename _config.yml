@@ -7,9 +7,9 @@ port: 4001
 baseurl: /sjt
 
 styles:
-  - main.css
+  - /assets/css/main.css
 javascript:
-  - main.js
+  - /assets/js/main.js
 
 markdown: kramdown
 
