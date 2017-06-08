@@ -1,10 +1,10 @@
 {% for script in site.javascript %}
-<script defer="defer" src="{{script}}"></script>
+<script defer="defer" src="{{site.baseurl}}{{script}}"></script>
 {% endfor %}
 
 <noscript id="deferred-styles">
 {% for style in site.additional_styles %}
-<link rel="stylesheet" type="text/css" href="{{style}}"/>
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}{{style}}"/>
 {% endfor %}
 </noscript>
 
