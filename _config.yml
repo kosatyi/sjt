@@ -7,10 +7,8 @@ port: 4001
 baseurl: /sjt
 
 styles:
+  - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
   - /sjt/assets/css/main.css
-
-additional_styles:
-  - https://fonts.googleapis.com/css?family=Open+Sans:300,400,700
 
 javascript:
   - /sjt/assets/js/main.js
