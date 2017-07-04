@@ -20,6 +20,15 @@ author:
   name: Stepan Kosatyi
   url: http://www.kosatyi.com/
 
+
+toolbar:
+-
+  name: Docs
+  link: /docs/
+-
+  name: Examples
+  link: /examples/
+
 buttons:
   -
     name: View on GitHub
