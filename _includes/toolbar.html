@@ -7,8 +7,8 @@
             <a href="#" data-rel="^/menu" data-toggle="true">Menu</a>
             <ul>
                 {% for item in site.toolbar %}
-                <li>
-                    <a href="{{item.link | prepend: site.baseurl | prepend:site.url }}" class="{{ item.class }}">
+                <li class="{{ item.class }}">
+                    <a href="{{item.link | prepend: site.baseurl | prepend:site.url }}">
                         {{ item.name }}
                     </a>
                 </li>
