@@ -40,9 +40,11 @@
 <main class="page-wrapper">
     <header class="page-toolbar">
         <div class="container">
+            {% if site.navigation %}
             <a href="#" data-rel="^/menu" data-nav="true" class="page-menu-item">
                 {% include icons/menu.svg %}
             </a>
+            {% endif %}
             <div class="page-brand">
                 <a href="{{ site.baseurl | prepend:site.url}}/" data-rel="^{{site.baseurl}}">
                     {{ site.title | default: site.github.repository_name }}
