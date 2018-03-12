@@ -3,16 +3,11 @@ gems:
 
 port: 4001
 
-styles:
-
-javascript:
-
 baseurl: /sjt
 
 navigation: true
 
 title: Simple Jekyll Theme
-
 description: Yet another one jekyyl theme for github projects
 
 author:
