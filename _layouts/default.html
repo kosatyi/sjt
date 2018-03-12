@@ -25,6 +25,7 @@
     {% endif %}
 </head>
 <body>
+{% if site.navigation %}
 <nav class="page-nav">
     <div class="page-nav-search">
         <div class="field">
@@ -35,6 +36,7 @@
         {% include navigation.html base_url='/' max_depth=4 %}
     </div>
 </nav>
+{% endif %}
 <main class="page-wrapper">
     <header class="page-toolbar">
         <div class="container">
