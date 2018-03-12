@@ -12,11 +12,12 @@
 })();
 
 (function(){
-    var wrapper  = find('body');
-    find('[data-nav]').addEventListener('click',function(ev){
-        ev.preventDefault();
-        wrapper.classList.toggle('show');
-        this.classList.toggle('show');
+    var wrapper  = find('html');
+    findAll('[data-toggle]').forEach(function(item){
+        item.addEventListener('click',function(ev){
+            ev.preventDefault();
+            wrapper.classList.toggle(this.getAttribute('data-toggle'));
+        })
     });
 })();
 

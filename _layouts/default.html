@@ -36,21 +36,25 @@
         {% include navigation.html base_url='/' max_depth=4 %}
     </div>
 </nav>
+<div class="page-nav-overlay" data-toggle="show-nav"></div>
 {% endif %}
 <main class="page-wrapper">
     <header class="page-toolbar">
         <div class="container">
             {% if site.navigation == true %}
-            <a href="#" data-rel="^/menu" data-nav="true" class="page-menu-item">
+            <a href="#" data-rel="^/menu" data-toggle="show-nav" class="page-menu-item">
                 {% include icons/menu.svg %}
             </a>
             {% endif %}
             <div class="page-brand">
                 <a href="{{ site.baseurl | prepend:site.url}}/" data-rel="^{{site.baseurl}}">
-                    {{ site.title | default: site.github.repository_name }}
+                    {{ site.brand | default: site.title | default: site.github.repository_name }}
                 </a>
             </div>
             <nav class="page-menu">
+                <a href="#" data-rel="^/menu" data-toggle="show-menu" class="page-menu-item toggle">
+                    {% include icons/plus-circle.svg %}
+                </a>
                 <ul>
                     {% for item in site.toolbar %}
                     <li class="{{ item.class }}">
