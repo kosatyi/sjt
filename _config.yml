@@ -1,4 +1,4 @@
-plugins:
+gems:
   - jekyll-seo-tag
 
 port: 4001
@@ -7,10 +7,13 @@ styles:
 
 javascript:
 
-exclude:
-  - vendor
+baseurl: /sjt
 
-baseurl:
+navigation: true
+
+title: Simple Jekyll Theme
+
+description: Yet another one jekyyl theme for github projects
 
 author:
   name: Stepan Kosatyi
