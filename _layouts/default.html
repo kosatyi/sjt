@@ -25,7 +25,7 @@
     {% endif %}
 </head>
 <body>
-{% if site.navigation %}
+{% if site.navigation == true %}
 <nav class="page-nav">
     <div class="page-nav-search">
         <div class="field">
@@ -40,7 +40,7 @@
 <main class="page-wrapper">
     <header class="page-toolbar">
         <div class="container">
-            {% if site.navigation %}
+            {% if site.navigation == true %}
             <a href="#" data-rel="^/menu" data-nav="true" class="page-menu-item">
                 {% include icons/menu.svg %}
             </a>
