@@ -4,7 +4,7 @@
     {% if include.base_url %}
         {% assign lvl_base_url = include.base_url %}
     {% endif %}
-
+{% endif %}
 {% assign current_lvl_url_length = lvl_base_url | split: '/' | size %}
 {% if lvl_base_url == '/' %}
 {% assign current_lvl_url_length = 1 %}
