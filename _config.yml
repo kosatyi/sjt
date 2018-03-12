@@ -5,16 +5,16 @@ port: 4001
 
 styles:
   - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
-  - /sjt/assets/css/main.css
+  - /assets/css/main.css
 
 javascript:
-  - /sjt/assets/js/main.js
+
 
 markdown: kramdown
 
-title:        Simple Jekyll Theme
-tagline:      Short Description
-baseurl: /sjt
+title: Simple Jekyll Theme
+tagline: Short Description
+baseurl:
 
 author:
   name: Stepan Kosatyi
@@ -43,7 +43,7 @@ buttons:
 defaults:
   -
     scope:
-      path: ""
-      type: "pages"
+      path: ''
+      type: 'pages'
     values:
-      layout: default
+      layout: 'default'

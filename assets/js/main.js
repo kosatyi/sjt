@@ -12,15 +12,17 @@
 })();
 
 (function(){
-    find('[data-toggle]').addEventListener('click',function(ev){
+    var wrapper  = find('body');
+    find('[data-nav]').addEventListener('click',function(ev){
         ev.preventDefault();
+        wrapper.classList.toggle('show');
         this.classList.toggle('show');
     });
 })();
 
 
 (function(){
-    var wrapper  = find('body');
+    var wrapper  = find('html');
     var toolbar  = find('.page-toolbar');
     var onscroll = function(){
         if( wrapper.scrollTop>0) {

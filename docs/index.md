@@ -1,7 +1,4 @@
----
-headline: Docs   
----
-# Docs
+# Documentation
 
 Content
 
