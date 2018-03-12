@@ -4,22 +4,14 @@ gems:
 port: 4001
 
 styles:
-  - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
-  - /assets/css/main.css
 
 javascript:
 
-
-markdown: kramdown
-
-title: Simple Jekyll Theme
-tagline: Short Description
 baseurl:
 
 author:
   name: Stepan Kosatyi
   url: http://www.kosatyi.com/
-
 
 toolbar:
 -
@@ -28,22 +20,3 @@ toolbar:
 -
   name: Examples
   link: /examples/
-
-buttons:
-  -
-    name: View on GitHub
-    link: https://github.com/kosatyi/sjt
-  -
-    name: Download .zip
-    link: http://github.com/kosatyi/sjt/archive/master.zip
-  -
-    name: Download .tar.gz
-    link: http://github.com/kosatyi/sjt/archive/master.tar.gz
-
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'pages'
-    values:
-      layout: 'default'
