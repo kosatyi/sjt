@@ -5,21 +5,28 @@
     {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
-    <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | absolute_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-32x32.png'| absolute_url }}" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-16x16.png' | absolute_url }}" sizes="16x16"/>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" type="text/css">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}" type="text/css">
     {% for style in site.styles %}
-        <link rel="stylesheet" href="{{style}}" type="text/css">
+    <link rel="stylesheet" href="{{style}}" type="text/css">
     {% endfor %}
     {% if site.analytics %}
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.analytics }}' , 'auto');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', '{{ site.analytics }}', 'auto');
         ga('send', 'pageview');
     </script>
     {% endif %}
@@ -29,7 +36,7 @@
 <nav class="page-nav">
     <div class="page-nav-search">
         <div class="field">
-            <input type="search" placeholder="Search">
+            <input type="search" class="search" placeholder="Search">
         </div>
     </div>
     <div class="page-nav-menu">
@@ -47,7 +54,7 @@
             </a>
             {% endif %}
             <div class="page-brand">
-                <a href="{{ site.baseurl | prepend:site.url}}/" data-rel="^{{site.baseurl}}">
+                <a href="{{ site.baseurl | prepend:site.url }}/" data-rel="^{{site.baseurl}}">
                     {{ site.brand | default: site.title | default: site.github.repository_name }}
                 </a>
             </div>
@@ -68,7 +75,10 @@
         </div>
     </header>
     <header class="page-header">
-        <div class="container">
+        {% assign path    = page.url | split: '/' %}
+        {% assign count   = path | size %}
+        <div class="container {% if count == 0 %}home{% endif %}">
+            {% if count == 0 %}
             <h2 class="project-title"><a href="{{site.baseurl}}/">{{ site.title | default: site.github.repository_name }}</a></h2>
             <h3 class="project-description">{{ site.description | default: site.github.project_tagline }}</h3>
             <div class="project-buttons">
@@ -76,6 +86,7 @@
                 <a href="{{ site.github.repository_url | append: '/archive/master.zip' }}" class="project-button">Download .zip</a>
                 <a href="{{ site.github.repository_url | append: '/archive/master.tar.gz' }}" class="project-button">Download .tar.gz</a>
             </div>
+            {% endif %}
             {% include breadcrumbs.html %}
         </div>
     </header>
@@ -87,16 +98,17 @@
     </section>
     <footer class="page-footer">
         <div class="container">
-            <div class="footer-copyright">
+            <div class="page-copyright">
                 Copyright &copy; <a href="{{site.url}}">{{site.title}}</a> {{ site.time | date: '%Y' }}.
-                Website developed by <a href="{{site.author.url | default: site.github.owner_url }}" target="_blank" rel="author">
+                Website developed by <a href="{{site.author.url | default: site.github.owner_url }}" target="_blank"
+                                        rel="author">
                 {{site.author.name | default: site.github.owner_name }}
             </a>.
             </div>
         </div>
     </footer>
 </main>
-<script defer="defer" src="{{site.baseurl}}/assets/js/main.js"></script>
+<script defer="async" src="{{site.baseurl}}/assets/js/main.js"></script>
 {% for script in site.javascript %}
 <script defer="defer" src="{{script}}"></script>
 {% endfor %}
