@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-32x32.png'| absolute_url }}" sizes="32x32"/>
     <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-16x16.png' | absolute_url }}" sizes="16x16"/>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" type="text/css">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url | append: '?' | append: site.github.build_revision }}" type="text/css">
     {% for style in site.styles %}
     <link rel="stylesheet" href="{{style}}" type="text/css">
     {% endfor %}
@@ -108,7 +108,8 @@
         </div>
     </footer>
 </main>
-<script defer="async" src="{{site.baseurl}}/assets/js/main.js"></script>
+
+<script defer="async" src="{{ '/assets/js/main.js' | absolute_url | append: '?' | append: site.github.build_revision  }}"></script>
 {% for script in site.javascript %}
 <script defer="defer" src="{{script}}"></script>
 {% endfor %}

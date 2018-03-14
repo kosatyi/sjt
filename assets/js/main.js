@@ -108,13 +108,13 @@
     window.addEventListener('scroll', function () {
         clearTimeout(timeout);
         timeout = setTimeout(callback, 0);
-    });
+    },false);
     callback();
 })();
 
 (function () {
-    var href = location.href;
-    findAll('[href],[data-rel]').filter(function (el, expr) {
+    var href = location.href,expr;
+    findAll('[href],[data-rel]').filter(function (el) {
         expr = el.getAttribute('data-rel');
         return expr ? href.match(expr) : el.href ? href.indexOf(el.href) !== -1 : false;
     }).map(function (el) {
