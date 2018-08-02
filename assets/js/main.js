@@ -24,8 +24,6 @@
 
 (function () {
 
-    var search = find('.search');
-
     function newNormalize(node) {
         var new_node;
         for (var i = 0, children = node.childNodes, nodeCount = children.length; i < nodeCount; i++) {
@@ -65,8 +63,8 @@
             pos = node.data.toUpperCase().indexOf(value);
             if (pos >= 0) {
                 var mark = document.createElement('mark');
-                var middlebit = node.splitText(pos);
-                var endbit = middlebit.splitText(value.length);
+                var middlebit   = node.splitText(pos);
+                var endbit      = middlebit.splitText(value.length);
                 var middleclone = middlebit.cloneNode(true);
                 mark.appendChild(middleclone);
                 middlebit.parentNode.replaceChild(mark, middlebit);
@@ -80,7 +78,8 @@
         }
         return skip;
     };
-    search.addEventListener('input', function (ev) {
+
+    function inputHandler(){
         var value = String(this.value).toUpperCase();
         var menu = find('.page-nav-menu');
         removeHighlight(menu);
@@ -88,9 +87,23 @@
             innerHighlight(menu, value);
         }
         findAll('a', menu).forEach(function (item) {
+            if( value ){
+                if(find('mark', item)){
+                    item.style.display  = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            } else {
+                item.style.display  = '';
+            }
             console.log(find('mark', item));
         });
+    };
+
+    findAll('.search').forEach(function(input){
+        input.addEventListener('input',inputHandler);
     });
+
 })();
 
 

@@ -1,7 +1,7 @@
 plugins:
   - jekyll-seo-tag
 
-port: 4001
+port: 4002
 
 baseurl: /sjt
 
@@ -13,7 +13,7 @@ description: Yet another one jekyyl theme for github projects
 
 author:
   name: Stepan Kosatyi
-  url: http://www.kosatyi.com/
+  url: https://kosatyi.com/
 
 toolbar:
 -
