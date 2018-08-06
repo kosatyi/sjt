@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-
 <meta charset="UTF-8">
-
 {% seo %}
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <meta name="theme-color" content="#157878">
-
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | absolute_url }}">
 <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-32x32.png'| absolute_url }}" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ '/assets/favicon/favicon-16x16.png' | absolute_url }}" sizes="16x16"/>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url | append: '?' | append: site.github.build_revision }}" type="text/css">
-
 {% for style in site.styles %}
 <link rel="stylesheet" href="{{style}}" type="text/css">
 {% endfor %}
-
 <script async="true" src="{{ '/assets/js/main.js' | absolute_url | append: '?' | append: site.github.build_revision  }}"></script>
 {% for script in site.javascript %}
-<script async="true" src="{{script}}"></script>
+<script async="true" src="{{script | absolute_url }}"></script>
 {% endfor %}
 
 {% if site.analytics %}<script>
