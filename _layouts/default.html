@@ -73,7 +73,7 @@ ga('send', 'pageview');
                 <ul>
                     {% for item in site.toolbar %}
                     <li class="{{ item.class }}">
-                        <a class="page-menu-item" href="{{ item.link | prepend: site.baseurl | prepend:site.url }}">
+                        <a class="page-menu-item" href="{{ item.link | absolute_url }}">
                             {{ item.name }}
                         </a>
                     </li>
