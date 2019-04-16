@@ -280,8 +280,11 @@ a {
   &-menu + &-menu {
     border-top: 1px solid #efefef;
   }
+
+
   &-menu {
     padding: @grid-gutter-width / 2;
+
     ul {
       padding: 0;
       margin: @grid-gutter-width / 2;
@@ -291,6 +294,10 @@ a {
         margin: @grid-gutter-width/2 0 0 0;
         a {
           font-weight: @font-weight-bold;
+          &.active{
+            color:@brand-success;
+            text-decoration: underline;
+          }
         }
         li {
           font-size: 0.9em;
@@ -298,6 +305,10 @@ a {
         ul {
           a {
             font-weight: @font-weight-normal;
+            &.active{
+              color:@brand-success;
+              text-decoration: underline;
+            }
           }
         }
       }
