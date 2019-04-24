@@ -95,9 +95,13 @@ ga('send', 'pageview');
         </div>
     </header>
     <section class="page-content">
+        {% if page.fluid %}
+        {{main}}
+        {% else %}
         <div class="container">
-           {{ content }}
+            {{main}}
         </div>
+        {% endif %}
     </section>
     <footer class="page-footer">
         <div class="container">
