@@ -39,11 +39,13 @@ ga('send', 'pageview');
     <div class="page-nav-menu">
         {% include navigation.html base_url='/' max_depth=4 %}
     </div>
+    {% if page.table_of_contents != false %}
     {% capture table_of_contents %}{% include table_of_contents.html html=content h_min=2 %}{% endcapture %}
     {% if table_of_contents.size > 0 %}
     <div class="page-nav-menu">
         {{ table_of_contents }}
     </div>
+    {% endif %}
     {% endif %}
     </div>
 </nav>
