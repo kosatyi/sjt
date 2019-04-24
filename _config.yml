@@ -1,7 +1,9 @@
 plugins:
   - jekyll-seo-tag
 
-port: 4002
+port: 4003
+
+github: [metadata]
 
 baseurl: /sjt
 
