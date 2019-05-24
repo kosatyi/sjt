@@ -1,0 +1,12 @@
+{% assign repositories = site.github.public_repositories | where:'fork', false %}
+{% if repositories.size > 0 %}
+<div class="page-projects">
+    {% for repository in repositories %}
+    {% if repository.homepage %}
+    {% if repository.description %}
+        <a href="{{ repository.homepage }}">{{ repository.name }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

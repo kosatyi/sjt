@@ -3,11 +3,10 @@ plugins:
 
 port: 4003
 
-github: [metadata]
-
 baseurl: /sjt
 
 navigation: true
+projects: true
 
 brand: SJT
 title: Simple Jekyll Theme
