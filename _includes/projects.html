@@ -1,6 +1,7 @@
 {% assign repositories = site.github.public_repositories | where:'fork', false %}
 {% if repositories.size > 0 %}
 <div class="page-projects">
+    <div>Other projects:</div>
     {% for repository in repositories %}
     {% if repository.homepage %}
     {% if repository.description %}
@@ -10,3 +11,4 @@
     {% endfor %}
 </div>
 {% endif %}
+
