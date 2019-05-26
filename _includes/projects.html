@@ -2,7 +2,7 @@
 {% if repositories.size > 0 %}
 <ul>
 {% for repository in repositories %}
-{% if repository.homepage %}
+{% if repository.homepage != '' %}
 {% if repository.description %}
 <li><a href="{{ repository.homepage }}">{{ repository.name }}</a></li>
 {% endif %}
