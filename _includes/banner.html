@@ -1,0 +1,17 @@
+{% assign path    = page.url | split: '/' %}
+{% assign count   = path | size %}
+<div class="container {% if count == 0 %}home{% endif %}">
+    {% if count == 0 %}
+    <h2 class="project-title"><a href="{{site.baseurl}}/">{{ site.title | default: site.github.repository_name }}</a>
+    </h2>
+    <h3 class="project-description">{{ site.description | default: site.github.project_tagline }}</h3>
+    <div class="project-buttons">
+        <a href="{{ site.source_url | default: site.github.repository_url }}" class="project-button">View on GitHub</a>
+        <a href="{{ site.source_url | default: site.github.repository_url | append: '/archive/master.zip' }}"
+           class="project-button">Download .zip</a>
+        <a href="{{ site.source_url | default: site.github.repository_url | append: '/archive/master.tar.gz' }}"
+           class="project-button">Download .tar.gz</a>
+    </div>
+    {% endif %}
+    {% include breadcrumbs.html %}
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    {% if site.navigation == true %}
+    <a href="#" data-rel="^/menu" data-toggle="show-nav" class="page-menu-item">
+        {% include icons/bars.svg %}
+    </a>
+    {% endif %}
+    {% if site.projects == true %}
+    <nav class="page-projects">
+    <a href="#" data-rel="^/projects" data-toggle="show-projects" class="page-menu-item">
+        {% include icons/github.svg %}
+    </a>
+    {% include projects.html %}
+    </nav>
+    {% endif %}
+    <div class="page-brand">
+        <a href="{{ site.baseurl | prepend:site.url }}/" data-rel="^{{site.baseurl}}">
+            {{ site.brand | default: site.title | default: site.github.repository_name }}
+        </a>
+    </div>
+    <nav class="page-menu">
+        <a href="#" data-rel="^/menu" data-toggle="show-menu" class="page-menu-item toggle">
+            {% include icons/plus-square.svg %}
+        </a>
+        <ul>
+            {% for item in site.toolbar %}
+            <li class="{{ item.class }}">
+                <a class="page-menu-item" href="{{ item.link | absolute_url }}">
+                    {{ item.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

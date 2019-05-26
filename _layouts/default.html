@@ -47,54 +47,22 @@ ga('send', 'pageview');
     </div>
     {% endif %}
     {% endif %}
+    {% if site.projects %}
+    <div class="page-nav-menu">
+        {% include projects.html %}
+    </div>
+    {% endif %}
     </div>
 </nav>
 <div class="page-nav-overlay" data-toggle="show-nav"></div>
 {% endif %}
 <main class="page-wrapper">
-    <header class="page-toolbar">
-        <div class="container">
-            {% if site.navigation == true %}
-            <a href="#" data-rel="^/menu" data-toggle="show-nav" class="page-menu-item">
-                {% include icons/bars.svg %}
-            </a>
-            {% endif %}
-            <div class="page-brand">
-                <a href="{{ site.baseurl | prepend:site.url }}/" data-rel="^{{site.baseurl}}">
-                    {{ site.brand | default: site.title | default: site.github.repository_name }}
-                </a>
-            </div>
-            <nav class="page-menu">
-                <a href="#" data-rel="^/menu" data-toggle="show-menu" class="page-menu-item toggle">
-                    {% include icons/plus-square.svg %}
-                </a>
-                <ul>
-                    {% for item in site.toolbar %}
-                    <li class="{{ item.class }}">
-                        <a class="page-menu-item" href="{{ item.link | absolute_url }}">
-                            {{ item.name }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+    <div class="page-toolbar">
+        {% include toolbar.html %}
+    </div>
     <header class="page-header">
-        {% assign path    = page.url | split: '/' %}
-        {% assign count   = path | size %}
-        <div class="container {% if count == 0 %}home{% endif %}">
-            {% if count == 0 %}
-            <h2 class="project-title"><a href="{{site.baseurl}}/">{{ site.title | default: site.github.repository_name }}</a></h2>
-            <h3 class="project-description">{{ site.description | default: site.github.project_tagline }}</h3>
-            <div class="project-buttons">
-                <a href="{{ site.source_url | default: site.github.repository_url }}" class="project-button">View on GitHub</a>
-                <a href="{{ site.source_url | default: site.github.repository_url | append: '/archive/master.zip' }}" class="project-button">Download .zip</a>
-                <a href="{{ site.source_url | default: site.github.repository_url | append: '/archive/master.tar.gz' }}" class="project-button">Download .tar.gz</a>
-            </div>
-            {% endif %}
-            {% include breadcrumbs.html %}
-        </div>
+        {% include banner.html %}
     </header>
     <section class="page-content">
         {% if page.fluid %}
@@ -107,13 +75,8 @@ ga('send', 'pageview');
     </section>
     <footer class="page-footer">
         <div class="container">
-            {% if site.projects %}
-                {% include projects.html %}
-            {% endif %}
             <div class="page-copyright">
-                <p>
-                    Copyright &copy; <a href="{{site.url}}">{{site.title}}</a> {{ site.time | date: '%Y' }}
-                </p>
+                <p>Copyright &copy; <a href="{{site.url}}">{{site.title}}</a> {{ site.time | date: '%Y' }}</p>
                 <p>
                     Website developed by
                     <a href="{{site.author.url | default: site.github.owner_url }}" target="_blank"
@@ -127,5 +90,14 @@ ga('send', 'pageview');
 {% for script in site.javascript %}
 <script src="{{script | absolute_url }}"></script>
 {% endfor %}
+<script>
+    document.addEventListener('sticky-change', e => {
+        const header = e.detail.target;  // header became sticky or stopped sticking.
+        const sticking = e.detail.stuck; // true when header is sticky.
+        header.classList.toggle('shadow', sticking); // add drop shadow when sticking.
+
+        document.querySelector('.who-is-sticking').textContent = header.textContent;
+    });
+</script>
 </body>
 </html>

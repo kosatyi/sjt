@@ -84,12 +84,12 @@
     };
 
     sjt.on = function () {
-        console.log('addEventListener',arguments);
+        //console.log('addEventListener',arguments);
         this._event_('addEventListener', arguments);
     };
 
     sjt.off = function () {
-        console.log('removeEventListener',arguments);
+        //console.log('removeEventListener',arguments);
         this._event_('removeEventListener', arguments);
     };
 
@@ -283,19 +283,27 @@
     var timeout = null;
     var wrapper = sjt.find('html');
     var toolbar = sjt.find('.page-toolbar');
+    var event   = null;
     var eventHandler = function () {
-        if (wrapper.scrollTop > 0) {
-            toolbar.classList.add('scrolled');
+        var currentOffset = toolbar.getBoundingClientRect().top;
+        var stickyOffset = parseInt( getComputedStyle(toolbar).top.replace('px','') );
+        var isStuck = currentOffset <= stickyOffset;
+        if (isStuck) {
+            toolbar.classList.add('is-sticky');
         } else {
-            toolbar.classList.remove('scrolled');
+            toolbar.classList.remove('is-sticky');
         }
     };
     eventHandler();
-    sjt.on(window,'scroll',function(){
+    sjt.on(window,'scroll',function(e){
+        event = e;
         clearTimeout(timeout);
         timeout = setTimeout(eventHandler, 0);
     });
-    sjt.on(sjt.window,'historychange',eventHandler);
+    sjt.on(sjt.window,'historychange',function(e){
+        event = e;
+        eventHandler()
+    });
 })();
 
 (function () {
