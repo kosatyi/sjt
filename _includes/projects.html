@@ -3,7 +3,7 @@
 <ul>
 {% for repository in repositories %}
 {% if repository.homepage.size > 0 %}
-    <li><a href="{{ repository.homepage }}">{{ repository.name }}</a></li>
+    <li><a href="{{ repository.homepage }}">{{ repository.full_name }}</a></li>
 {% else %}
     <li><a href="{{ repository.svn_url }}" target="_blank">{{ repository.full_name }}</a></li>
 {% endif %}
