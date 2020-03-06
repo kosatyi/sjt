@@ -4,7 +4,7 @@
 {% for repository in repositories %}
 {% if repository.homepage != '' %}
 {% if repository.description %}
-<li><a href="{{ repository.homepage }}">{{ repository.name }}</a></li>
+<li><a href="{{ repository.homepage | defaults: repository.repository_url }}">{{ repository.name }}</a></li>
 {% endif %}
 {% endif %}
 {% endfor %}

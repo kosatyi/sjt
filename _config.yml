@@ -3,7 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-port: 4003
+port: 4004
 
 baseurl: /sjt
 
