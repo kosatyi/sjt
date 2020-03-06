@@ -1,5 +1,7 @@
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 port: 4003
 
@@ -14,7 +16,6 @@ description: Yet another one jekyyl theme for github projects
 
 styles:
   - https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i
-
 
 author:
   name: Stepan Kosatyi
