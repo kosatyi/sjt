@@ -13,7 +13,7 @@ projects: true
 brand: SJT
 title: Simple Jekyll Theme
 description: Yet another one jekyyl theme for github projects
-
+logo: icons/github.svg
 styles:
   - https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i
 
