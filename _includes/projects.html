@@ -3,9 +3,9 @@
 <ul>
 {% for repository in repositories %}
 {% if repository.homepage == '' || repository.homepage == null %}
-    <li><a href="{{ repository.homepage }}">{{ repository.name }}</a></li>
-{% else %}
     <li><a href="{{ repository.svn_url }}">{{ repository.name }}</a></li>
+{% else %}
+    <li><a href="{{ repository.homepage }}">{{ repository.name }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>
