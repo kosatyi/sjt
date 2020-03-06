@@ -320,3 +320,20 @@
     matchLinks();
     sjt.on(window,'historychange',matchLinks);
 })();
+
+(function () {
+    sjt.findAll('[data-youtube]').forEach(function (item) {
+        sjt.on(item,'click',function(ev){
+            var id     = item.getAttribute('data-youtube');
+            var iframe = document.createElement('iframe');
+            var url    = "https://www.youtube.com/embed/"+id+"?autoplay=1&feature=oembed";
+            sjt.off(item,'click',arguments.callee);
+            iframe.setAttribute('src',url);
+            iframe.setAttribute('frameborder','0');
+            iframe.setAttribute('allowfullscreen','1');
+            iframe.setAttribute('allow','accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+            item.innerHTML = '';
+            item.appendChild(iframe);
+        });
+    });
+})();
