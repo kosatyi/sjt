@@ -4,6 +4,17 @@ title:
 
 # Simple Jekyll Theme
 
+
+
+{% assign repositories = site.github.public_repositories | where:'fork', false %}
+{% if repositories.size > 0 %}
+{% for repository in repositories %}
+```json 
+    {{ repository.svn_url | jsonify}}
+```
+{% endfor %}
+{% endif %}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Duis sollicitudin, nibh et bibendum viverra, dolor odio fringilla leo, a 
 dignissim diam odio non libero. Donec scelerisque odio sed malesuada consectetur. 
