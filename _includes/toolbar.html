@@ -7,7 +7,11 @@
     {% if site.projects == true %}
     <nav class="page-projects">
     <a href="#" data-rel="^/projects" data-toggle="show-projects" class="page-menu-item">
-        {% include {{site.logo | default: 'github.svg'}} %}
+        {% if site.logo %}
+            {% include {{site.logo}} %}
+        {% else %}
+            {% include icons/github.svg %}
+        {% endif %}
     </a>
     {% include projects.html %}
     </nav>
