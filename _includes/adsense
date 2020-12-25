@@ -1,0 +1,6 @@
+<ins class="adsbygoogle" style="display:block"
+    data-ad-client="{{ site.adsense }}"
+    data-ad-slot="{{ include.slot }}"
+    data-ad-format="{{ include.format | default 'auto' }}"
+    data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
