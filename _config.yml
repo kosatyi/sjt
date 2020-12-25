@@ -5,10 +5,15 @@ plugins:
 
 port: 4004
 
-baseurl: /sjt
+exclude:
+  - vendor
+  - node_modules
+  - src
 
 navigation: true
 projects: true
+
+baseurl: /sjt
 
 brand: SJT
 title: Simple Jekyll Theme
