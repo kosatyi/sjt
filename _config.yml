@@ -15,6 +15,7 @@ projects: true
 
 baseurl: /sjt
 
+
 brand: SJT
 title: Simple Jekyll Theme
 description: Yet another one jekyyl theme for github projects
