@@ -2,15 +2,15 @@ $font-family-base:-apple-system,system-ui, BlinkMacSystemFont, "Segoe UI", Robot
 $font-size-root:16px;
 $font-size-base:16px;
 
-$font-weight-bold: 500;
+$font-weight-bold: 500 !default;
 $font-weight-normal: 400;
-$grid-gutter-width: 1rem;
+$grid-gutter-width: 1rem !default;
 
-$base-color: #2d3438;
+$base-color: #2d3438 !default;
 
-$brand-primary:#23232a;
-$brand-secondary: #4b4b5d;
-$brand-success: #32225d;
+$brand-primary:#23232a !default;
+$brand-secondary: #4b4b5d !default;
+$brand-success: #32225d !default;
 
 $light-border:rgba(255,255,255,0.15);
 
