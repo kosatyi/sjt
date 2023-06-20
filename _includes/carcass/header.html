@@ -1,5 +1,7 @@
+{% assign path    = page.url | split: '/' %}
+{% assign count   = path | size %}
 <div class="page-layout page-layout-header page-layout-header-{{ page.layout }}">
-    {% if page.layout == 'home' %}
+    {% if count == 0 %}
         <h2 class="project-title">
             <a href="{{ site.baseurl }}/">{{ site.title | default: site.github.repository_name }}</a>
         </h2>
