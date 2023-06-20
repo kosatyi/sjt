@@ -14,17 +14,18 @@ exclude:
 navigation: true
 projects: true
 
-baseurl: /sjt
+baseurl: /ipsp-js-sdk
+
+repository: kosatyi/sjt
 
 brand: SJT
 title: Simple Jekyll Theme
-description: Yet another one jekyyl theme for github projects
+description: Yet another one jekyll theme for github projects
 logo: icons/github.svg
 styles:
   - https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i
 
 analytics: UA-37629144-1
-adsense: ca-pub-3650650669153101
 
 author:
   name: Stepan Kosatyi

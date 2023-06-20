@@ -1,12 +1,12 @@
 {% assign repositories = site.github.public_repositories | where:'fork', false %}
 {% if repositories.size > 0 %}
-<ul>
+<div class="page-toolbar-list">
 {% for repository in repositories %}
 {% if repository.homepage.size > 0 %}
-    <li><a href="{{ repository.homepage }}">{{ repository.full_name }}</a></li>
+    <div><a href="{{ repository.homepage }}">{{ repository.full_name }}</a></div>
 {% else %}
-    <li><a href="{{ repository.svn_url }}" target="_blank">{{ repository.full_name }}</a></li>
+    <div><a href="{{ repository.svn_url }}" target="_blank">{{ repository.full_name }}</a></div>
 {% endif %}
 {% endfor %}
-</ul>
+</div>
 {% endif %}

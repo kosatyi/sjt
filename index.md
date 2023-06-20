@@ -4,9 +4,12 @@ title:
 
 # Simple Jekyll Theme
 
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Duis sollicitudin, nibh et bibendum viverra, dolor odio fringilla leo, a 
-dignissim diam odio non libero. Donec scelerisque odio sed malesuada consectetur. 
+dignissim diam odio non libero. Donec scelerisque odio sed malesuada consectetur.
+
+
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 - Aliquam vestibulum metus id tristique mollis.

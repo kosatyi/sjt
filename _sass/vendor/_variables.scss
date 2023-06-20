@@ -1,0 +1,18 @@
+$font-family-base:-apple-system,system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-root:16px;
+$font-size-base:16px;
+
+$font-weight-bold: 500;
+$font-weight-normal: 400;
+$grid-gutter-width: 1rem;
+
+$base-color: #2d3438;
+
+$brand-primary:#23232a;
+$brand-secondary: #4b4b5d;
+$brand-success: #32225d;
+
+$light-border:rgba(255,255,255,0.15);
+
+$header-gradient: linear-gradient(120deg, $brand-primary, $brand-success ) ;
+$header-gradient-null: linear-gradient(120deg, rgba(255,255,255,0.3) , rgba(255,255,255,0.1) ) ;
